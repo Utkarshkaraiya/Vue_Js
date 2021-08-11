@@ -4,3 +4,6 @@ body{
 [v-cloak]{
     display: none;
 }
+.sytleclass{
+    background-color:lawngreen ;
+}

@@ -1,16 +1,27 @@
+
 Vue.createApp({
 data(){
     return {
       result:'Hello World!!',
       name:'This Is Utkarsh!!',
       flag:false,
-      arr:[1,2,3,4,5] 
+      message:'',
+     
+      arr:[1,2,3,4,5],
+      fname:'<h1>Utkarsh Karaiya</h1>',
+      age:20
     }},
     methods:{
-       fullname(){
-            return `${this.result} ${this.name}`
+      
+       decrement(){
+            this.age--;
        }
+
     
+},computed:{
+     fullname(){ console.log("full name called")
+     return `${this.result} ${this.name}`
+}
 }
 
 }).mount('#root')

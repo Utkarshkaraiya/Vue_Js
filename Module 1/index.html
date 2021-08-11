@@ -11,10 +11,23 @@
 <body>
     <div id="root" v-cloak>
         <!-- <h1>Hello World!!</h1> -->
-        {{fullname()}}
-        <h1 v-if="flag">hey if else</h1>
-        <h1 v-else>Else condition</h1>
+        {{fullname}}
+      
+        
+        <h1 :class="{sytleclass:flag}">hey if else</h1>
+        <input type="button" @click="flag=!flag">button</input>
+        <!-- <h1 v-else>Else condition</h1> -->
         <h1 v-for="item in arr":key="item">{{item}}</h1>
+        <input type="text" v-model="result"/>
+        <!-- {{fname}} -->
+        <p v-html="fname"></p>
+        <p>{{age}}</p>
+        <!-- <input type="button" v-on:click="age++">Increment</input>
+        <input type="button" v-on:click="decrement">Decrement</input> -->
+        <input type="button" @click="age++">Increment</input>
+        <input type="button" @click="decrement">Decrement</input>
+        <input type="text" v-model="message"/>
+        <p>{{message}}</p>
     </div>
     <!-- <div id="root1">
         {{name}}
