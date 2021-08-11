@@ -1,6 +1,6 @@
 <template>
 <div>
-    <div>Post Api</div>
+    <div>Post Api Here</div>
     <form @submit="submitdata" method="post">
 
 <input type="text" name="title" v-model="post.title"/><br>

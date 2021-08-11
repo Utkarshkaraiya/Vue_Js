@@ -1,7 +1,8 @@
 <template>
 <div>
- 
-  <div>{{ msg | upper }}</div>
+ {{list}}
+  <!-- <div>{{ msg | upper }}</div> -->
+  <div>Get Api</div>
 <table border="1px">
 <tr>
   <td>id</td>

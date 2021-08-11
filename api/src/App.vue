@@ -1,21 +1,22 @@
 <template>
   <div id="app">
  
-    <Api msg="Welcome to Your Vue.js App"/>
-    <Post/>
+    <!-- <Api msg="Welcome to Your Vue.js App Get Your Api"/>
+    <Post/> -->
+<router-view></router-view>
   </div>
 </template>
 
 <script>
-import Api from './components/Api.vue'
-import Post from './components/Post.vue'
+// import Api from './components/Api.vue'
+// import Post from './components/Post.vue'
 
 export default {
   name: 'App',
-  components: {
-    Api
-    ,Post
-  }
+  // components: {
+  //   Api
+  //   ,Post
+  // }
 }
 </script>
 
