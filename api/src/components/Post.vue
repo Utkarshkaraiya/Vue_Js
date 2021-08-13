@@ -1,7 +1,14 @@
 <template>
 <div>
+
     <div>Post Api Here</div>
+    <router-link to="user/1">user1</router-link><br><br>
+        <router-link to="user/2">user2</router-link><br><br>
+    <router-link to="user/3">user3</router-link><br><br>
+    <router-link to="user/4">user4</router-link><br><br>
+
     <form @submit="submitdata" method="post">
+        
 
 <input type="text" name="title" v-model="post.title"/><br>
 <input type="text" name="Authore" v-model="post.author"/><br>

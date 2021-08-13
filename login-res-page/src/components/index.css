@@ -1,0 +1,12 @@
+form{
+    width: 600px;
+    height: 300px;
+    margin: auto;
+}
+#app button{
+    padding-left: 10px;
+}
+#app{
+    margin: auto;
+   
+}

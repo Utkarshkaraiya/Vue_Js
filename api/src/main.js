@@ -6,10 +6,15 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import Api from "./components/Api.vue"
 import Post from "./components/Post.vue"
+import User1 from "./components/user.vue"
+import error from "./components/error.vue"
 Vue.use(VueRouter);
 const routes=[
   {path:'/api',component:Api},
-  {path:'/post',component:Post}
+
+  {path :"/user/:id",component:User1},
+  {path:'/post',component:Post},
+  {path:'*',component:error},
 ]
 const router=new VueRouter({
   routes
