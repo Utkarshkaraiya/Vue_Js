@@ -10,7 +10,7 @@
   <td>Action</td>
 </tr>
 <tr v-for="item in list" :key="item.id">
-
+{{item.data}}
   <td>{{list.data.districts[0].district_id}}</td>
   <td>{{list.data.districts[0].district_name}}</td>
   <td><button @click="deletee(list.data.districts[0].district_id)">Delete</button></td>

@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <TodoList/>
  <nav>
    <ul>
      <li>
@@ -21,9 +22,12 @@
 <script>
 // import Api from './components/Api.vue'
 // import Post from './components/Post.vue'
-
+import TodoList from "./components/TodoList.vue"
 export default {
   name: 'App',
+  components:{
+    TodoList
+  }
   // components: {
   //   Api
   //   ,Post
