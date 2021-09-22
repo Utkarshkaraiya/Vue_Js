@@ -7,13 +7,15 @@ import Kids from './components/NavbarItems/Kids.vue'
 import Men from './components/NavbarItems/Men.vue'
 import Offers from './components/NavbarItems/Offers.vue'
 import Women from './components/NavbarItems/Women.vue'
+import Home from  './components/NavbarItems/Home.vue'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 const routes=[
   {path:'/kids',component:Kids},
   {path:'/Men',component:Men},
   {path:'/Offers',component:Offers},
-  {path:'/Women',component:Women} 
+  {path:'/Women',component:Women},
+  {path:'/Home',component:Home} 
 ]
 const router=new VueRouter({
   routes

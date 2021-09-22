@@ -1,5 +1,5 @@
 {
-  "name": "ecommerce",
+  "name": "api",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
-    "axios": "^0.21.4",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.17.3",
     "core-js": "^3.6.5",
@@ -17,7 +17,7 @@
     "popper.js": "^1.16.1",
     "portal-vue": "^2.1.7",
     "vue": "^2.6.11",
-    "vue-axios": "^3.3.7",
+    "vue-axios": "^3.2.5",
     "vue-router": "^3.5.2"
   },
   "devDependencies": {
@@ -29,7 +29,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "sass": "^1.26.11",
     "sass-loader": "^10.0.2",
-    "vue-cli-plugin-bootstrap-vue": "~0.8.2",
+    "vue-cli-plugin-bootstrap-vue": "~0.8.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

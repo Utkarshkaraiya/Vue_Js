@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="footer">
 <!-- Footer -->
 <footer class="page-footer font-small elegant-color">
 
@@ -164,3 +164,12 @@ export default {
     name:'Footer',
 }
 </script>
+<style>
+.footer{
+ 
+  background-color: aliceblue
+  ;
+  
+}
+</style>
+

@@ -34,6 +34,7 @@
                 </li>
 
             </ul>
+            <router-view></router-view>
 
             <div class="form-group has-search flex-grow-1">
                 <span class="fa fa-search form-control-feedback"></span>
