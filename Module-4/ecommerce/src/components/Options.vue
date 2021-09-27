@@ -2,14 +2,10 @@
     <div class="items">
 <div class="paddi"  v-for="item in list" :key="item.id">
 
-  <div class="card" @click="detail">
+  <div class="card">
   <img :src="item.image" alt="Denim Jeans" style="width:200px; height:200px;">
-  <router-link to="detail/1">Detail</router-link>
-
   <h2>{{item.title}}</h2>
   <p class="price">${{item.price}}</p>
-  <p class="price">Offer Price${{item.price |50}}</p>
-
   <p>Best Offer</p>
   <p><button>Add to Cart</button></p>
 </div>
@@ -26,10 +22,6 @@ export default {
     data() {
       return {
         list:undefined,
-      }
-    },methods: {
-      detail(){
-        window.location.replace("http://localhost:8080/#/");
       }
     },
     mounted(){

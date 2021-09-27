@@ -1,7 +1,6 @@
 <template>
   <div id="app">
    <!-- <Navbar/> -->
-   <router-link to="/"></router-link>
    <Slidingbanner/>
    <Catagory/>
    <Options/>
