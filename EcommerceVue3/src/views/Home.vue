@@ -1,7 +1,9 @@
 <template v-cloak>
  <div>
 <Slider/>
+<Filter/>
 <Product/>
+
 <Footer/>
  </div>
 
@@ -12,10 +14,12 @@
 // import HelloWorld fro '@/components/HelloWorld.vue'
 import Footer from "@/components/Footer.vue"
 import Slider from "@/components/Slider.vue"
+import Filter from "@/components/Filter.vue"
+
 import Product from "@/components/Product.vue"
 export default {
   name: 'Home',
-  components: {Footer,Slider,Product
+  components: {Footer,Slider,Product,Filter
     
   }
 }
