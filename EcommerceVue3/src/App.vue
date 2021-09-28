@@ -11,18 +11,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <a class="navbar-brand" href="/">Logo</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"></li>
         <li>  <router-link to="/about">About</router-link> </li>
-        <li>  <router-link to="/">Product</router-link> </li>
-        <li>  <router-link to="/catagory">Catagory</router-link> </li>
+        <li>  <router-link to="/AllProduct">Product</router-link> </li>
+        <li>  <router-link to="/Category">Category</router-link> </li>
         <li>  <router-link to="/">Home</router-link> </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span><router-link to="/Login">Login/Signup</router-link>  </a></li>
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       </ul>
     </div>

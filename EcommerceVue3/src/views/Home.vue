@@ -1,4 +1,4 @@
-<template>
+<template v-cloak>
  <div>
 <Slider/>
 <Product/>
