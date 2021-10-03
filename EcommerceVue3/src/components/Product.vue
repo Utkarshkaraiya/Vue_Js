@@ -1,12 +1,15 @@
 <template>
+<div>
+      <h1>ALL PRODUCTS</h1>
     <div class="items" v-cloak>
+  
 <div class="paddi"  v-for="item in list" :key="item.id">
 
   <div class="card" >
   <img :src="item.image" alt="Denim Jeans" style="width:200px; height:200px;">
   
 
-  <h2>{{item.title}}</h2>
+  <h3>{{item.title}}</h3>
   <p class="price">${{item.price}}</p>
   <p class="price">Offer Price${{item.price |50}}</p>
 
@@ -15,6 +18,7 @@
 </div>
 </div>
     </div>
+</div>
 </template>
 <script>
 import Vue from 'vue';
@@ -40,7 +44,7 @@ export default {
       }}
 }
 </script>
-<style>
+<style scoped>
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 400px;
@@ -51,7 +55,7 @@ export default {
 
 }
 .paddi{
-  padding: 20px;
+  padding: 2px;
   border: 2px solid white
 }
 .items{
@@ -73,7 +77,7 @@ img{margin: auto}
   outline: 0;
   padding: 12px;
   color: white;
-  background-color: rgb(255, 80, 80);
+  background-color: rgb(58, 55, 55);
   text-align: center;
   cursor: pointer;
   width: 100%;

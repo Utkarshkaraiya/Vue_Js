@@ -1,167 +1,94 @@
 <template>
-     <div class="footer">
-<!-- Footer -->
-<footer class="page-footer font-small elegant-color">
-
-  <div class="color-primary">
-    <div class="container">
-
-      <!-- Grid row-->
-      <div class="row py-4 d-flex align-items-center">
-
-        <!-- Grid column -->
-        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-          <h6 class="mb-0">Get connected with us on social networks!</h6>
+<div>
+  <footer class="bg-white">
+    <div class="container py-5">
+      <div class="row py-4">
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="img/logo.png" alt="" width="180" class="mb-3">
+          <p class="font-italic text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+          <ul class="list-inline mt-4">
+            <li class="list-inline-item"><a href="#" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="pinterest"><i class="fa fa-pinterest"></i></a></li>
+            <li class="list-inline-item"><a href="#" target="_blank" title="vimeo"><i class="fa fa-vimeo"></i></a></li>
+          </ul>
         </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-6 col-lg-7 text-center text-md-right">
-
-          <!-- Facebook -->
-          <a class="fb-ic">
-            <i class="fab fa-facebook-f white-text mr-4"> </i>
-          </a>
-          <!-- Twitter -->
-          <a class="tw-ic">
-            <i class="fab fa-twitter white-text mr-4"> </i>
-          </a>
-          <!-- Google +-->
-          <a class="gplus-ic">
-            <i class="fab fa-google-plus-g white-text mr-4"> </i>
-          </a>
-          <!--Linkedin -->
-          <a class="li-ic">
-            <i class="fab fa-linkedin-in white-text mr-4"> </i>
-          </a>
-          <!--Instagram-->
-          <a class="ins-ic">
-            <i class="fab fa-instagram white-text"> </i>
-          </a>
-
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Shop</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-muted">For Women</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">For Men</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Stores</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Our Blog</a></li>
+          </ul>
         </div>
-        <!-- Grid column -->
-
+        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Company</h6>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-2"><a href="#" class="text-muted">Login</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Register</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Wishlist</a></li>
+            <li class="mb-2"><a href="#" class="text-muted">Our Products</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-lg-0">
+          <h6 class="text-uppercase font-weight-bold mb-4">Newsletter</h6>
+          <p class="text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At itaque temporibus.</p>
+          <div class="p-1 rounded border">
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+              <div class="input-group-append">
+                <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <!-- Grid row-->
-
     </div>
-  </div>
 
-  <!-- Footer Links -->
-  <div class="container text-center text-md-left pt-4 pt-md-5">
-
-    <!-- Grid row -->
-    <div class="row mt-1 mt-md-0 mb-4 mb-md-0">
-
-      <!-- Grid column -->
-      <div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
-
-        <!-- Links -->
-        <h5>About me</h5>
-        <hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
-
-        <p class="foot-desc mb-0">Here you can use rows and columns to organize your footer content. Lorem
-          ipsum dolor sit amet,
-          consectetur
-          adipisicing elit.</p>
-
+    <!-- Copyrights -->
+    <div class="bg-light py-4">
+      <div class="container text-center">
+        <p class="text-muted mb-0 py-2">© 2019 Bootstrapious All rights reserved.</p>
       </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
-
-        <!-- Links -->
-        <h5>Products</h5>
-        <hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
-
-        <ul class="list-unstyled foot-desc">
-          <li class="mb-2">
-            <a href="#!">MDBootstrap</a>
-          </li>
-          <li class="mb-2">
-            <a href="#!">MDWordPress</a>
-          </li>
-          <li class="mb-2">
-            <a href="#!">BrandFlow</a>
-          </li>
-          <li class="mb-2">
-            <a href="#!">Bootstrap Angular</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
-
-        <!-- Links -->
-        <h5>Useful links</h5>
-        <hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
-
-        <ul class="list-unstyled foot-desc">
-          <li class="mb-2">
-            <a href="#!">Your Account</a>
-          </li>
-          <li class="mb-2">
-            <a href="#!">Become an Affiliate</a>
-          </li>
-          <li class="mb-2">
-            <a href="#!">Shipping Rates</a>
-          </li>
-          <li class="mb-2">
-            <a href="#!">Help</a>
-          </li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
-      <hr class="clearfix w-100 d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-3 mx-auto mt-3 mt-md-0 mb-0 mb-md-4">
-
-        <!-- Links -->
-        <h5>Contacts</h5>
-        <hr class="color-primary mb-4 mt-0 d-inline-block mx-auto w-60">
-
-        <ul class="fa-ul foot-desc ml-4">
-          <li class="mb-2"><span class="fa-li"><i class="far fa-map"></i></span>New York, Avenue Street 10
-          </li>
-          <li class="mb-2"><span class="fa-li"><i class="fas fa-phone-alt"></i></span>042 876 836 908</li>
-          <li class="mb-2"><span class="fa-li"><i class="far fa-envelope"></i></span>company@example.com</li>
-          <li><span class="fa-li"><i class="far fa-clock"></i></span>Monday - Friday: 10-17</li>
-        </ul>
-
-      </div>
-      <!-- Grid column -->
-
     </div>
-    <!-- Grid row -->
+  </footer>
+</div>
 
-  </div>
-  <!-- Footer Links -->
 
-  <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-  </div>
-  <!-- Copyright -->
 
-</footer>
-<!-- Footer -->
-    </div>
+    
 </template>
 
-<script>
+<script >
 export default {
     name:'Footer'
 }
 </script>
+<style scoped>
+body {
+  background: #ff5f6d;
+  background: -webkit-linear-gradient(to right, #ff5f6d, #ffc371);
+  background: linear-gradient(to right, #ff5f6d, #ffc371);
+  min-height: 100vh;
+}
+
+#button-addon1 {
+  color: #ffc371;
+}
+
+i {
+  color: #ffc371;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+.form-control.shadow-0:focus {
+  box-shadow: none;
+}
+</style>
+

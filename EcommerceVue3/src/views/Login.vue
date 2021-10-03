@@ -1,118 +1,219 @@
 <template>
     <div>
         <div class="container">
-<div class="main">
-<h2>VueStore Login Form Validation</h2>
-<form id="form_id"  @submit="handelsubmit">
-<label>User Name :</label>
-<input type="text" name="username" id="username" v-model="data.username"/>
-<label>Password :</label>
-<input type="password" name="password" id="password" v-model="data.password"/>
-<button type="submit" id="input">Login</button>
-</form>
-<span><b class="note">Note : </b>For this demo use following username and password. <br/><b class="valid">User Name : Formget<br/>Password : formget#123</b></span>
+  <form @submit="handelsubmit">
+    <div class="row">
+      <h2 style="text-align:center">Login with Social Media or Manually</h2>
+      <div class="vl">
+        <span class="vl-innertext">or</span>
+      </div>
+
+      <div class="col">
+        <a href="#" class="fb btn">
+          <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+        </a>
+        <a href="#" class="twitter btn">
+          <i class="fa fa-twitter fa-fw"></i> Login with Twitter
+        </a>
+        <a href="#" class="google btn">
+          <i class="fa fa-google fa-fw"></i> Login with Google+
+        </a>
+      </div>
+
+      <div class="col">
+        <div class="hide-md-lg">
+          <p>Or sign in manually:</p>
+        </div>
+
+        <input type="text" name="username" v-model="username" placeholder="Username" required>
+        <input type="password" name="password" v-model="password"  placeholder="Password" required>
+        <input type="submit" value="Login">
+      </div>
+
+    </div>
+  </form>
 </div>
+
+<div class="bottom-container">
+  <div class="row">
+    <div class="col">
+      <a href="#" style="color:white" class="btn">Sign up</a>
+    </div>
+    <div class="col">
+      <a href="#" style="color:white" class="btn">Forgot password?</a>
+    </div>
+  </div>
 </div>
+
     </div>
 </template>
 <script>
 export default {
     data() {
         return {
-            data:{
+        
                 username:"",
                 password:""
 
 
-            }
+            
         }
     },methods: {
         handelsubmit(e){
-            e.preventDefault();
-            
-            console.log(this.data)
+             e.preventDefault();
+             let passwordIndex;
+           let credentials={
+            username:this.username,
+            password:this.password,
+           };
+            console.log(credentials)
+            // this.username="",
+            // this.password=""
+            let isusers=localStorage.users;
+            isusers=JSON.parse(isusers);
+            let usernameIndex=isusers.findIndex(
+                (user)=>user.username===credentials.username
+            );
+            if(usernameIndex>-1){
+                 passwordIndex=isusers.findIndex((user)=>
+                user.password===credentials.password);
+            }
+            if( passwordIndex >-1){
+                this.$router.push("/")
+            }else{
+                alert("Wrong Credentials")
+            }
+
         }
     },
 }
 </script>
+<style scoped>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-<style>
-@import url(http://fonts.googleapis.com/css?family=Raleway);
-h2{
-background-color: #FEFFED;
-padding: 30px 35px;
-margin: -10px -50px;
-text-align:center;
-border-radius: 10px 10px 0 0;
+* {
+  box-sizing: border-box;
 }
-hr{
-margin: 10px -50px;
-border: 0;
-border-top: 1px solid #ccc;
-margin-bottom: 40px;
+
+/* style the container */
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+} 
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
 }
-div.container{
-width: 900px;
-height: 610px;
-margin:35px auto;
-font-family: 'Raleway', sans-serif;
+
+input:hover,
+.btn:hover {
+  opacity: 1;
 }
-div.main{
-width: 300px;
-padding: 10px 50px 25px;
-border: 2px solid gray;
-border-radius: 10px;
-font-family: raleway;
-float:left;
-margin-top:50px;
+
+/* add appropriate colors to fb, twitter and google buttons */
+.fb {
+  background-color: #3B5998;
+  color: white;
 }
-input[type=text],input[type=password]{
-width: 100%;
-height: 40px;
-padding: 5px;
-margin-bottom: 25px;
-margin-top: 5px;
-border: 2px solid #ccc;
-color: #4f4f4f;
-font-size: 16px;
-border-radius: 5px;
+
+.twitter {
+  background-color: #55ACEE;
+  color: white;
 }
-label{
-color: #464646;
-text-shadow: 0 1px 0 #fff;
-font-size: 14px;
-font-weight: bold;
+
+.google {
+  background-color: #dd4b39;
+  color: white;
 }
-center{
-font-size:32px;
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
 }
-.note{
-color:red;
+
+input[type=submit]:hover {
+  background-color: #45a049;
 }
-.valid{
-color:green;
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
 }
-.back{
-text-decoration: none;
-border: 1px solid rgb(0, 143, 255);
-background-color: rgb(0, 214, 255);
-padding: 3px 20px;
-border-radius: 2px;
-color: black;
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
-input[type=button]{
-font-size: 16px;
-background: linear-gradient(#ffbc00 5%, #ffdd7f 100%);
-border: 1px solid #e5a900;
-color: #4E4D4B;
-font-weight: bold;
-cursor: pointer;
-width: 100%;
-border-radius: 5px;
-padding: 10px 0;
-outline:none;
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
 }
-input[type=button]:hover{
-background: linear-gradient(#ffdd7f 5%, #ffbc00 100%);
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
 }
 </style>

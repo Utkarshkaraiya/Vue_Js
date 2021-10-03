@@ -4,9 +4,9 @@
 
   <div class="card" @click="detail">
   <img :src="item.image" alt="Denim Jeans" style="width:200px; height:200px;">
-  <router-link to="detail/1">Detail</router-link>
+  <!-- <router-link to="detail/1">Detail</router-link> -->
 
-  <h2>{{item.title}}</h2>
+  <h3>{{item.title}}</h3>
   <p class="price">${{item.price}}</p>
   <p class="price">Offer Price${{item.price |50}}</p>
 
@@ -27,13 +27,9 @@ export default {
       return {
         list:undefined,
       }
-    },methods: {
-      detail(){
-        window.location.replace("http://localhost:8080/#/");
-      }
     },
     mounted(){
-      Vue.axios.get('https://fakestoreapi.com/products')
+      Vue.axios.get('https://fakestoreapi.com/products/category/jewelery')
       .then((res)=>{
         this.list=res.data
         console.warn(res.data)
@@ -41,7 +37,7 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 400px;
@@ -52,7 +48,7 @@ export default {
 
 }
 .paddi{
-  padding: 20px;
+  /* padding: 20px; */
   border: 2px solid white
 }
 .items{
@@ -61,7 +57,7 @@ export default {
  flex-wrap: wrap;
   display:flex;
   justify-content: space-between;
-  margin-bottom: 100px
+  /* margin-bottom: 100px */
 }
 
 .price {

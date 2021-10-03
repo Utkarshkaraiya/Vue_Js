@@ -16,14 +16,17 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"></li>
-        <li>  <router-link to="/about">About</router-link> </li>
-        <li>  <router-link to="/AllProduct">Product</router-link> </li>
-        <li>  <router-link to="/Category">Category</router-link> </li>
+        <li>  <router-link to="/Jwellery" >Jwellery</router-link> </li>
+        <li>  <router-link to="/Women" >Women</router-link> </li>
+        <li>  <router-link to="/Men" >Men</router-link> </li>
         <li>  <router-link to="/">Home</router-link> </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span><router-link to="/Login">Login/Signup</router-link>  </a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span><router-link to="/Login">Login</router-link>  </a></li>
+         <li><a href="#"><span class="glyphicon glyphicon-user"></span><router-link to="/Register">Register</router-link>  </a></li>
+        
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+
       </ul>
     </div>
   </div>

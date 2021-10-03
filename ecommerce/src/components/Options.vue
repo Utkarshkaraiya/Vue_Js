@@ -28,9 +28,7 @@ export default {
         list:undefined,
       }
     },methods: {
-      detail(){
-        window.location.replace("http://localhost:8080/#/");
-      }
+     
     },
     mounted(){
       Vue.axios.get('https://fakestoreapi.com/products')

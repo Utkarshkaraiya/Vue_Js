@@ -1,20 +1,24 @@
-<template v-cloak>
-    <div class="items">
+<template>
+<div>
+      <h1>ALL PRODUCTS</h1>
+    <div class="items" v-cloak>
+  
 <div class="paddi"  v-for="item in list" :key="item.id">
 
-  <div class="card" @click="detail">
+  <div class="card" >
   <img :src="item.image" alt="Denim Jeans" style="width:200px; height:200px;">
-  <!-- <router-link to="detail/1">Detail</router-link> -->
+  
 
   <h3>{{item.title}}</h3>
   <p class="price">${{item.price}}</p>
-  <p class="price">Offer Price${{item.price |50}}</p>
+  <p class="price">Offer Price${{item.price}}</p>
 
   <p>Best Offer</p>
   <p><button>Add to Cart</button></p>
 </div>
 </div>
     </div>
+</div>
 </template>
 <script>
 import Vue from 'vue';
@@ -22,19 +26,19 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 Vue.use(VueAxios,axios)
 export default {
-    name:'AllProduct',
+    name:'Singlepage',props:["id"],
     data() {
       return {
         list:undefined,
       }
     },
     mounted(){
-      Vue.axios.get("https://fakestoreapi.com/products/category/women's clothing")
+      axios.get('https://fakestoreapi.com/products/'+this.id)
       .then((res)=>{
         this.list=res.data
         console.warn(res.data)
       })
-    }
+    },
 }
 </script>
 <style scoped>
@@ -48,7 +52,7 @@ export default {
 
 }
 .paddi{
-  /* padding: 20px; */
+  padding: 2px;
   border: 2px solid white
 }
 .items{
@@ -57,7 +61,7 @@ export default {
  flex-wrap: wrap;
   display:flex;
   justify-content: space-between;
-  /* margin-bottom: 100px */
+  margin-bottom: 100px
 }
 
 .price {
@@ -70,7 +74,7 @@ img{margin: auto}
   outline: 0;
   padding: 12px;
   color: white;
-  background-color: rgb(255, 80, 80);
+  background-color: rgb(58, 55, 55);
   text-align: center;
   cursor: pointer;
   width: 100%;
