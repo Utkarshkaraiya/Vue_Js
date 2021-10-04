@@ -1,3 +1,5 @@
+//Women Components
+
 <template v-cloak>
     <div class="items">
 <div class="paddi"  v-for="item in list" :key="item.id">

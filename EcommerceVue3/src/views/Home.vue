@@ -5,6 +5,7 @@
 <Product/>
 
 <Footer/>
+
  </div>
 
 </template>
