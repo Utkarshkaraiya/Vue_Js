@@ -37,10 +37,10 @@
 <div class="bottom-container">
   <div class="row">
     <div class="col">
-      <a href="#" style="color:white" class="btn">Sign up</a>
+      <a href="/register" style="color:white" class="btn">Sign up</a>
     </div>
     <div class="col">
-      <a href="#" style="color:white" class="btn">Forgot password?</a>
+      <a href="/register" style="color:white" class="btn">Forgot password?</a>
     </div>
   </div>
 </div>

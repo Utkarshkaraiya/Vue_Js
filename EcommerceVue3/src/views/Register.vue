@@ -5,6 +5,17 @@
                 <h1>Register</h1>
                 <p>Please fill in this form to create an account.</p>
                 <hr>
+                  <label for="Username">
+                    <b>Username</b>
+                </label>
+                <input
+                    type="text"
+                    v-model="username"
+                    placeholder="Enter Username"
+                    name="Username"
+                    id="Username"
+                    required
+                >
 
                 <label for="email">
                     <b>Email</b>
@@ -58,35 +69,79 @@
         </form>
     </div>
 </template>
+// <script>
+// export default {
+//   name: "Register",
+//   data() {
+//     return {
+//       email: "",
+//       password: "",
+//       password2: "",
+//       users: []
+//     };
+//   },
+//   methods: {
+//     registeruser() {
+//       let user = {
+//         email: this.email,
+//         password: this.password,
+//         password2: this.password2
+//       };
+//       console.log(user);
+//       if(localStorage.users){
+//           let isusers=localStorage.users;
+//           this.users=JSON.parse(isusers)
+//       }
+//       this.users.push(user);
+//       localStorage.setItem("users", JSON.stringify(this.users));
+//       this.email="", this.password="", this.password2="";
+//       this.$router.push("/Login")
+//     }
+//   }
+// };
+// </script>
 <script>
+
 export default {
-  name: "Register",
+   name: "Register",
   data() {
     return {
+      username: "",
       email: "",
       password: "",
       password2: "",
-      users: []
+      // errors: {},
+      users: [],
     };
   },
   methods: {
     registeruser() {
       let user = {
+        username: this.username,
         email: this.email,
         password: this.password,
-        password2: this.password2
+        password2: this.password2,
       };
-      console.log(user);
-      if(localStorage.users){
-          let isusers=localStorage.users;
-          this.users=JSON.parse(isusers)
-      }
-      this.users.push(user);
-      localStorage.setItem("users", JSON.stringify(this.users));
-      this.email="", this.password="", this.password2="";
-      this.$router.push("/Login")
-    }
-  }
+      // const { isInvalid, errors } = validateRegisterInput(user);
+      // if (isInvalid) {
+      //   this.errors = errors;
+      // } else 
+        // this.errors = {};
+        // store user in local storage
+        if (localStorage.users) {
+          let lsUsers = localStorage.users;
+          this.users = JSON.parse(lsUsers);
+        }
+        this.users.push(user);
+        localStorage.setItem("users", JSON.stringify(this.users));
+        this.username = "";
+        this.email = "";
+        this.password = "";
+        this.password2 = "";
+        this.$router.push("/login");
+      
+    },
+  },
 };
 </script>
 <style scoped>

@@ -2,7 +2,7 @@
 
 <template v-cloak>
 <div>
-  <div class="w3-white w3-margin">
+  <!-- <div class="w3-white w3-margin">
         <div  class="w3-container w3-padding w3-black">
           <h4>Filter Products</h4>
         </div>
@@ -28,7 +28,7 @@
           </li>
         </ul>
       </div>
-      <hr>
+      <hr> -->
   <!-- <button @click="sortby">Sort</button> -->
     <div class="items">
       <!-- <button @click="detail">Sort</button> -->
